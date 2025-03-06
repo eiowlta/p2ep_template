@@ -44,10 +44,11 @@ const tableTypes = {
         if (table.allowMissing) {
           console.log(`Skipping ${msgName}`)
           section("eboot");
+          addr = read_u32(true);
         }
         else throw new Error(`Unable to find entry ${msgName}`)
       } else {
-        msgManager.addMessage(
+        addr = msgManager.addMessage(
           messages.messages[msgName],
           `str_${msgName}_${table.format}`,
           table.format,

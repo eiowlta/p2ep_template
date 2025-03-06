@@ -2,6 +2,7 @@
  * button
  ****************************/
 section("mod");
+align(4)
 sym("buttonFix", () => {
   li($t1, 0x6000);
   andi($at, $a0, 0x6000);

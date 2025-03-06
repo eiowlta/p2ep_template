@@ -1,6 +1,7 @@
 //mips.d.ts
 
 section("mod");
+align(4)
 sym("contactFilePointers", () => {
   write_u32(0);
   write_u32(0);
